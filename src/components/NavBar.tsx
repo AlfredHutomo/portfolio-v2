@@ -17,10 +17,13 @@ const NavBar = () => {
         <Link href="/about" className="link-btn">
           ABOUT
         </Link>
-        <Link href="/work" className="link-btn">
-          WORK
+        <Link href="/works" className="link-btn">
+          WORKS
         </Link>
-        <a className="link-btn">EMAIL</a>
+        <a className="link-btn-coming-soon">SNAPS</a>
+        <a href="mailto:alfredhutomo@gmail.com" className="link-btn">
+          EMAIL
+        </a>
       </div>
       <div className="flex flex-row sm:flex-col items-center justify-center sm:justify-between sm:h-[130px] gap-[30px] sm:gap-0">
         <Link href="/projects">

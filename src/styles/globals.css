@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  transition: background 1s ease,
+              color 0.5s ease;
+}
+
 @layer components {
   .link-btn {
     @apply font-bold text-jeans dark:text-water;
+  }
+
+  .link-btn-coming-soon {
+    @apply font-bold text-jeans dark:text-water opacity-50 cursor-not-allowed;
   }
 
   .sticky-mobile-nav {
