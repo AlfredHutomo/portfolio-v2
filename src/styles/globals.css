@@ -6,6 +6,10 @@
   .link-btn {
     @apply font-bold text-jeans dark:text-water;
   }
+
+  .sticky-mobile-nav {
+    @apply sticky bottom-0 left-0 z-50 bg-milk dark:bg-abyss sm:static;
+  }
 }
 
 @layer base {

@@ -28,7 +28,7 @@ const ThemeSwitcher = () => {
   return (
     <button
       onClick={handleThemeChange}
-      className="w-28 flex justify-center items-center"
+      className="w-full flex justify-center items-center"
     >
       <CgDarkMode />
     </button>

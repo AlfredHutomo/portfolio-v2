@@ -23,7 +23,9 @@ export default function RootLayout({
             }
           >
             <NavBar />
-            <div className="flex-1 relative">{children}</div>
+            <div className="flex-1 relative max-h-screen overflow-scroll">
+              {children}
+            </div>
             <ControlBar />
           </div>
         </Providers>

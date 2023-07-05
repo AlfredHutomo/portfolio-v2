@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-    <nav className="flex flex-col sm:justify-between sm:w-[100px] py-[40px]">
+    <nav className="sticky-mobile-nav flex flex-col sm:justify-between sm:w-[100px] py-[40px]">
       <div className="flex sm:flex-col items-center justify-evenly sm:gap-8 mb-5">
         <Link href="/">
           <Image
