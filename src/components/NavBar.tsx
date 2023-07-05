@@ -1,8 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
+  const pathname = usePathname();
+
   return (
     <nav className="sticky-mobile-nav flex flex-col sm:justify-between sm:w-[100px] py-[40px]">
       <div className="flex sm:flex-col items-center justify-evenly sm:gap-8 mb-5">
@@ -14,10 +17,16 @@ const NavBar = () => {
             height={50}
           />
         </Link>
-        <Link href="/about" className="link-btn">
+        <Link
+          href="/about"
+          className={`link-btn ${pathname === "/about" ? "underline" : ""}`}
+        >
           ABOUT
         </Link>
-        <Link href="/works" className="link-btn">
+        <Link
+          href="/works"
+          className={`link-btn ${pathname === "/works" ? "underline" : ""}`}
+        >
           WORKS
         </Link>
         <a className="link-btn-coming-soon">SNAPS</a>
