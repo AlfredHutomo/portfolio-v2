@@ -19,11 +19,11 @@ export default function RootLayout({
           <div
             className={
               workSans.className +
-              " flex flex-col-reverse justify-between sm:flex-row min-h-screen bg-milk dark:bg-abyss"
+              " flex flex-col-reverse items-stretch justify-between sm:flex-row min-h-screen bg-milk dark:bg-abyss"
             }
           >
             <NavBar />
-            <div>{children}</div>
+            <div className="flex-1 relative">{children}</div>
             <ControlBar />
           </div>
         </Providers>

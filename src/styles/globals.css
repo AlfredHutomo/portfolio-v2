@@ -7,3 +7,29 @@
     @apply font-bold text-jeans dark:text-water;
   }
 }
+
+@layer base {
+  h1 {
+    @apply text-jeans dark:text-water text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-jeans dark:text-water text-3xl font-bold ;
+  }
+
+  h3 {
+    @apply text-jeans dark:text-water text-2xl font-bold;
+  }
+
+  h4 {
+    @apply text-jeans dark:text-water text-xl font-bold;
+  }
+
+  h5 {
+    @apply text-jeans dark:text-water text-lg font-bold;
+  }
+
+  h6 {
+    @apply text-jeans dark:text-water font-bold;
+  }
+}
