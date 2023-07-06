@@ -36,18 +36,23 @@ const NavBar = () => {
         <Link href="/">
           <SmallAHLogo />
         </Link>
-        {internalLinks.map((link) => (
-          <motion.div key={link.text} whileHover={{ scale: 1.1 }}>
-            <Link
-              href={link.path}
-              className={`${
-                link.disabled ? "link-btn-coming-soon" : "link-btn"
-              } ${pathname === link.path ? "underline" : ""}`}
-            >
-              {link.text}
-            </Link>
-          </motion.div>
-        ))}
+        {internalLinks
+          .map(
+            (link) =>
+              !link.disabled && (
+                <motion.div key={link.text} whileHover={{ scale: 1.1 }}>
+                  <Link
+                    href={link.path}
+                    className={`${
+                      link.disabled ? "link-btn-coming-soon" : "link-btn"
+                    } ${pathname === link.path ? "underline" : ""}`}
+                  >
+                    {link.text}
+                  </Link>
+                </motion.div>
+              )
+          )
+          .filter(Boolean)}
         <a href="mailto:alfredhutomo@gmail.com" className="link-btn">
           EMAIL
         </a>
