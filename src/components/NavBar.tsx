@@ -36,7 +36,7 @@ const NavBar = () => {
       <div className="flex flex-row sm:flex-col items-center justify-center sm:justify-between sm:h-[130px] gap-[30px] sm:gap-0">
         <Link href="/projects">
           <Image
-            src="/assets/linkedIn.svg"
+            src="/assets/LinkedIn.svg"
             alt="AH Logo Small"
             width={26}
             height={26}
