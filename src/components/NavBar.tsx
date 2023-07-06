@@ -47,9 +47,11 @@ const NavBar = () => {
   return (
     <nav className="fixed-mobile-nav flex flex-col sm:justify-between sm:w-[100px] py-5 sm:py-10">
       <div className="flex sm:flex-col items-center justify-evenly sm:gap-8 mb-5 primary">
-        <Link href="/" aria-label="Home Button Logo">
-          <SmallAHLogo />
-        </Link>
+        <motion.div whileHover={{ scale: 1.1 }}>
+          <Link href="/" aria-label="Home Button Logo">
+            <SmallAHLogo />
+          </Link>
+        </motion.div>
         {internalLinks
           .map(
             (link) =>
@@ -67,9 +69,13 @@ const NavBar = () => {
               )
           )
           .filter(Boolean)}
-        <a href="mailto:alfredhutomo@gmail.com" className="link-btn">
+        <motion.a
+          whileHover={{ scale: 1.1 }}
+          href="mailto:alfredhutomo@gmail.com"
+          className="link-btn"
+        >
           EMAIL
-        </a>
+        </motion.a>
       </div>
       <div className="flex flex-row sm:flex-col items-center justify-center sm:justify-between sm:h-[130px] gap-[30px] sm:gap-0 primary">
         {socials.map(({ link, LogoComponent }) => (
