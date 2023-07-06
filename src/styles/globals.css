@@ -16,7 +16,7 @@
   }
 
   .page {
-    @apply flex flex-col px-7 pb-40 mb-7 sm:py-20 sm:px-[100px] w-full max-w-3xl overflow-scroll;
+    @apply flex flex-col px-7 pb-40 mb-7 sm:py-20 sm:px-[100px] w-full max-w-3xl overflow-scroll no-scrollbar;
   }
 }
 
@@ -49,5 +49,16 @@
 @layer utilities {
   .primary {
     @apply text-jeans dark:text-water;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
   }
 }
