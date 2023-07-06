@@ -1,3 +1,4 @@
+"use client";
 import { usePathname } from "next/navigation";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { useEffect, useState } from "react";

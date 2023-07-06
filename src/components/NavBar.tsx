@@ -1,12 +1,32 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+
+const internalLinks = [
+  {
+    text: "ABOUT",
+    path: "/about",
+    disabled: false,
+  },
+  {
+    text: "WORKS",
+    path: "/works",
+    disabled: false,
+  },
+  {
+    text: "SNAPS",
+    path: "/snaps",
+    disabled: true,
+  },
+];
 
 const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky-mobile-nav flex flex-col sm:justify-between sm:w-[100px] py-[40px]">
+    <nav className="fixed-mobile-nav flex flex-col sm:justify-between sm:w-[100px] py-5 sm:py-10">
       <div className="flex sm:flex-col items-center justify-evenly sm:gap-8 mb-5">
         <Link href="/">
           <Image
@@ -16,19 +36,18 @@ const NavBar = () => {
             height={50}
           />
         </Link>
-        <Link
-          href="/about"
-          className={`link-btn ${pathname === "/about" ? "underline" : ""}`}
-        >
-          ABOUT
-        </Link>
-        <Link
-          href="/works"
-          className={`link-btn ${pathname === "/works" ? "underline" : ""}`}
-        >
-          WORKS
-        </Link>
-        <a className="link-btn-coming-soon">SNAPS</a>
+        {internalLinks.map((link) => (
+          <motion.div key={link.text} whileHover={{ scale: 1.1 }}>
+            <Link
+              href={link.path}
+              className={`${
+                link.disabled ? "link-btn-coming-soon" : "link-btn"
+              } ${pathname === link.path ? "underline" : ""}`}
+            >
+              {link.text}
+            </Link>
+          </motion.div>
+        ))}
         <a href="mailto:alfredhutomo@gmail.com" className="link-btn">
           EMAIL
         </a>

@@ -5,7 +5,7 @@ export const metadata = {
 
 export default function Works() {
   return (
-    <main className="flex flex-col px-7 sm:py-[80px] sm:px-[100px] w-full max-w-3xl overflow-scroll">
+    <main className="flex flex-col px-7 pb-40 sm:pb-0 sm:py-[80px] sm:px-[100px] w-full max-w-3xl overflow-scroll">
       <section className="flex flex-col gap-6 leading-relaxed">
         <h1>Works</h1>
         <h3>Professional Experiences</h3>

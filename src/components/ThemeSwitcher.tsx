@@ -1,6 +1,9 @@
+"use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { CgDarkMode } from "react-icons/cg";
+
+import { motion } from "framer-motion";
 
 const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
@@ -12,7 +15,11 @@ const ThemeSwitcher = () => {
   }, []);
 
   if (!mounted) {
-    return null;
+    return (
+      <button className="w-full flex justify-center items-center">
+        <CgDarkMode />
+      </button>
+    );
   }
 
   const handleThemeChange = () => {
@@ -26,12 +33,14 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <button
+    <motion.button
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       onClick={handleThemeChange}
       className="w-full flex justify-center items-center"
     >
       <CgDarkMode />
-    </button>
+    </motion.button>
   );
 };
 

@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  transition: background 1s ease,
-              color 0.5s ease;
-}
-
 @layer components {
   .link-btn {
     @apply font-bold text-jeans dark:text-water;
@@ -16,8 +11,8 @@ body {
     @apply font-bold text-jeans dark:text-water opacity-50 cursor-not-allowed;
   }
 
-  .sticky-mobile-nav {
-    @apply sticky bottom-0 left-0 z-50 bg-milk dark:bg-abyss sm:static;
+  .fixed-mobile-nav {
+    @apply fixed bottom-0 left-0 z-50 bg-milk dark:bg-abyss sm:static w-full;
   }
 }
 
