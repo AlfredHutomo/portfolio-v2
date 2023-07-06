@@ -36,7 +36,7 @@ const ThemeSwitcher = () => {
     <motion.button
       onClick={handleThemeChange}
       whileHover={{ scale: 1.2 }}
-      className="w-[50px] sm:w-full flex justify-center items-center"
+      className="w-[50px] flex justify-center items-center"
       aria-label="Theme Switcher"
     >
       <CgDarkMode />
