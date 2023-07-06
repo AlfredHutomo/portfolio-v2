@@ -34,9 +34,8 @@ const ThemeSwitcher = () => {
 
   return (
     <motion.button
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
       onClick={handleThemeChange}
+      whileHover={{ scale: 1.2 }}
       className="w-full flex justify-center items-center"
     >
       <CgDarkMode />

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
@@ -24,6 +23,21 @@ const internalLinks = [
     text: "SNAPS",
     path: "/snaps",
     disabled: true,
+  },
+];
+
+const socials = [
+  {
+    link: "https://www.linkedin.com/in/alfred-hutomo/",
+    LogoComponent: LinkedInLogo,
+  },
+  {
+    link: "https://www.instagram.com/alfredhutomo/",
+    LogoComponent: InstagramLogo,
+  },
+  {
+    link: "https://github.com/AlfredHutomo",
+    LogoComponent: GitLogo,
   },
 ];
 
@@ -58,15 +72,11 @@ const NavBar = () => {
         </a>
       </div>
       <div className="flex flex-row sm:flex-col items-center justify-center sm:justify-between sm:h-[130px] gap-[30px] sm:gap-0 primary">
-        <Link href="/projects">
-          <LinkedInLogo />
-        </Link>
-        <Link href="/projects">
-          <InstagramLogo />
-        </Link>
-        <Link href="/projects">
-          <GitLogo />
-        </Link>
+        {socials.map(({ link, LogoComponent }) => (
+          <a href={link} key={link}>
+            <LogoComponent />
+          </a>
+        ))}
       </div>
     </nav>
   );
