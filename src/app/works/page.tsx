@@ -56,7 +56,7 @@ export default function Works() {
         <h3>Programming & Coding Experiences</h3>
         <p>
           <b>Creative Officer & Webmaster</b> at Indonesian Film Festival (IFF)
-          Australia - (2020 - 2021)
+          Australia (2020 - 2021)
         </p>
         <h3>Projects</h3>
         {projects.map((project) => {

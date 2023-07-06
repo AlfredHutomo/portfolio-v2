@@ -25,7 +25,7 @@ const ControlBar = () => {
   }, [pathname]);
 
   return (
-    <nav className="flex p-7 justify-between sm:flex-col sm:w-[100px] sm:px-0 sm:py-[40px] sm:items-center col-span-1 text-jeans dark:text-water text-xl">
+    <nav className="flex p-7 justify-between sm:flex-col sm:w-[100px] sm:px-0 sm:py-[40px] sm:items-center col-span-1 text-jeans dark:text-water text-xl z-50">
       <p className="w-28 sm:w-fit">{month}</p>
       <ThemeSwitcher />
       <div className="flex flex-row sm:flex-col justify-between items-center w-28 sm:w-fit sm:h-[130px]">
