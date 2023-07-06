@@ -4,6 +4,7 @@ import { Work_Sans } from "next/font/google";
 import ControlBar from "@/components/ControlBar";
 import { Providers } from "./providers";
 import PageReveal from "@/animation/PageReveal";
+import { Analytics } from "@vercel/analytics/react";
 
 const workSans = Work_Sans({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
             <ControlBar />
           </div>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
