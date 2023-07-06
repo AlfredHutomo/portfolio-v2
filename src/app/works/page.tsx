@@ -31,6 +31,9 @@ export default function Works() {
           Attendance Summary App
         </a>
         <p className="font-bold">Doctor Booking App</p>
+        <a className="font-bold underline" href="https://v1.alfredtomo.dev/">
+          Portfolio Website V1
+        </a>
         <a
           className="font-bold underline"
           href="https://www.realfutbolinstitute.com/"

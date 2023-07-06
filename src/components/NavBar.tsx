@@ -73,9 +73,9 @@ const NavBar = () => {
       </div>
       <div className="flex flex-row sm:flex-col items-center justify-center sm:justify-between sm:h-[130px] gap-[30px] sm:gap-0 primary">
         {socials.map(({ link, LogoComponent }) => (
-          <a href={link} key={link}>
+          <motion.a href={link} key={link} whileHover={{ scale: 1.1 }}>
             <LogoComponent />
-          </a>
+          </motion.a>
         ))}
       </div>
     </nav>
