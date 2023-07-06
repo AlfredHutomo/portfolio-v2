@@ -4,6 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
+import SmallAHLogo from "@/components/svgs/small_ah_logo.svg";
+import LinkedInLogo from "@/components/svgs/LinkedIn.svg";
+import InstagramLogo from "@/components/svgs/Instagram.svg";
+import GitLogo from "@/components/svgs/Git.svg";
+
 const internalLinks = [
   {
     text: "ABOUT",
@@ -27,14 +32,9 @@ const NavBar = () => {
 
   return (
     <nav className="fixed-mobile-nav flex flex-col sm:justify-between sm:w-[100px] py-5 sm:py-10">
-      <div className="flex sm:flex-col items-center justify-evenly sm:gap-8 mb-5">
+      <div className="flex sm:flex-col items-center justify-evenly sm:gap-8 mb-5 primary">
         <Link href="/">
-          <Image
-            src="/assets/small_ah_logo.svg"
-            alt="AH Logo Small"
-            width={68}
-            height={50}
-          />
+          <SmallAHLogo />
         </Link>
         {internalLinks.map((link) => (
           <motion.div key={link.text} whileHover={{ scale: 1.1 }}>
@@ -52,31 +52,15 @@ const NavBar = () => {
           EMAIL
         </a>
       </div>
-      <div className="flex flex-row sm:flex-col items-center justify-center sm:justify-between sm:h-[130px] gap-[30px] sm:gap-0">
+      <div className="flex flex-row sm:flex-col items-center justify-center sm:justify-between sm:h-[130px] gap-[30px] sm:gap-0 primary">
         <Link href="/projects">
-          <Image
-            src="/assets/LinkedIn.svg"
-            alt="AH Logo Small"
-            width={26}
-            height={26}
-            color=""
-          />
+          <LinkedInLogo />
         </Link>
         <Link href="/projects">
-          <Image
-            src="/assets/Instagram.svg"
-            alt="AH Logo Small"
-            width={26}
-            height={26}
-          />
+          <InstagramLogo />
         </Link>
         <Link href="/projects">
-          <Image
-            src="/assets/Git.svg"
-            alt="AH Logo Small"
-            width={26}
-            height={26}
-          />
+          <GitLogo />
         </Link>
       </div>
     </nav>

@@ -41,3 +41,9 @@
     @apply text-jeans dark:text-water font-bold;
   }
 }
+
+@layer utilities {
+  .primary {
+    @apply text-jeans dark:text-water;
+  }
+}

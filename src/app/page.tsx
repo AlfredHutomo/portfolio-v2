@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import LargeAHLogo from "@/components/svgs/large_ah_logo.svg";
 
 export const metadata = {
   title: "Alfred Hutomo",
@@ -8,15 +9,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="absolute flex flex-col items-center justify-center h-full w-full p-7">
-      <Image
-        className="relative"
-        src="/assets/large_ah_logo.svg"
-        alt="AH Logo"
-        // className="dark:invert"
-        width={400}
-        height={24}
-        priority
-      />
+      <LargeAHLogo className="primary" />
     </main>
   );
 }
