@@ -5,13 +5,13 @@ export const metadata = {
 
 export default function Works() {
   return (
-    <main className="flex flex-col px-7 pb-40 sm:pb-0 sm:py-[80px] sm:px-[100px] w-full max-w-3xl overflow-scroll">
+    <main className="page">
       <section className="flex flex-col gap-6 leading-relaxed">
         <h1>Works</h1>
         <h3>Professional Experiences</h3>
         <p>
-          <b>Software Development Engineer</b>at Kargo Tech, Jakarta, Indonesia,
-          hybrid (2022 - present)
+          <b>Software Development Engineer</b> at Kargo Tech, Jakarta,
+          Indonesia, hybrid (2022 - present)
         </p>
         <p>
           <b>Full-Stack Engineering Mentor</b> at Skilvul, Jakarta, Indonesia,
@@ -40,7 +40,9 @@ export default function Works() {
         >
           Real Futbol Institute Website
         </a>
-        <p className="font-bold">16th Indonesian Film Festival</p>
+        <a className="font-bold underline" href="https://iffaustralia.com/">
+          16th Indonesian Film Festival partnering with Relab Studios
+        </a>
         <p className="font-bold">15th 2.0 Indonesian Film Festival</p>
         <p className="font-bold">Quiz plus</p>
         <h6>Exciting Projects Coming Soon</h6>
