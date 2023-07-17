@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { CgDarkMode } from "react-icons/cg";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
@@ -33,14 +33,14 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <motion.button
+    <m.button
       onClick={handleThemeChange}
       whileHover={{ scale: 1.2 }}
       className="w-[50px] flex justify-center items-center"
       aria-label="Theme Switcher"
     >
       <CgDarkMode />
-    </motion.button>
+    </m.button>
   );
 };
 

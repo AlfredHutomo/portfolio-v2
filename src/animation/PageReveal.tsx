@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const PageReveal = ({
   children,
@@ -9,7 +9,7 @@ const PageReveal = ({
   className: string;
 }) => {
   return (
-    <motion.main
+    <m.main
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -21,7 +21,7 @@ const PageReveal = ({
       className={className}
     >
       {children}
-    </motion.main>
+    </m.main>
   );
 };
 
