@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-milk dark:bg-abyss">
+      <body className="primary-bg">
         <Providers>
           <div
             className={`${workSans.className} flex flex-col-reverse items-stretch justify-between sm:flex-row min-h-screen`}

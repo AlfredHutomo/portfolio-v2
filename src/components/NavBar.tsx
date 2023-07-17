@@ -45,7 +45,7 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed-mobile-nav flex flex-col sm:justify-between sm:w-[100px] py-5 sm:py-10">
+    <nav className="fixed-mobile-nav primary-bg flex flex-col sm:justify-between sm:w-[100px] py-5 sm:py-10">
       <div className="flex sm:flex-col items-center justify-evenly sm:gap-8 mb-5 primary">
         <motion.div whileHover={{ scale: 1.1 }}>
           <Link href="/" aria-label="Home Button Logo">
