@@ -1,3 +1,5 @@
+import PageReveal from "@/animation/PageReveal";
+
 export const metadata = {
   title: "Alfred Hutomo - Works",
   description: "Alfred Hutomo's works and experiences.",
@@ -37,7 +39,7 @@ const projects: { name: string; link?: string }[] = [
 
 export default function Works() {
   return (
-    <main className="page">
+    <PageReveal className="page">
       <section className="flex flex-col gap-6 leading-relaxed">
         <h1>Works</h1>
         <h3>Professional Experiences</h3>
@@ -80,6 +82,6 @@ export default function Works() {
         })}
         <h6>Exciting Projects Revealed Soon</h6>
       </section>
-    </main>
+    </PageReveal>
   );
 }

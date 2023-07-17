@@ -9,7 +9,7 @@ const PageReveal = ({
   className: string;
 }) => {
   return (
-    <motion.div
+    <motion.main
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -21,7 +21,7 @@ const PageReveal = ({
       className={className}
     >
       {children}
-    </motion.div>
+    </motion.main>
   );
 };
 

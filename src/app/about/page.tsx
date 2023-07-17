@@ -1,3 +1,5 @@
+import PageReveal from "@/animation/PageReveal";
+
 export const metadata = {
   title: "Alfred Hutomo - About",
   description:
@@ -6,7 +8,7 @@ export const metadata = {
 
 export default function About() {
   return (
-    <main className="page">
+    <PageReveal className="page">
       <section className="flex flex-col gap-6 leading-relaxed">
         <h1>About Me</h1>
         <p>
@@ -40,6 +42,6 @@ export default function About() {
           School Simprug in Jakarta.
         </p>
       </section>
-    </main>
+    </PageReveal>
   );
 }

@@ -21,9 +21,9 @@ export default function RootLayout({
             className={`${workSans.className} flex flex-col-reverse items-stretch justify-between sm:flex-row min-h-screen`}
           >
             <NavBar />
-            <PageReveal className="flex-1 relative max-h-screen sm:overflow-scroll no-scrollbar">
+            <div className="flex-1 relative max-h-screen sm:overflow-scroll no-scrollbar">
               {children}
-            </PageReveal>
+            </div>
             <ControlBar />
           </div>
         </Providers>
