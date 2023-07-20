@@ -4,42 +4,10 @@ import { usePathname } from "next/navigation";
 import { m } from "framer-motion";
 
 import SmallAHLogo from "@/components/svgs/small_ah_logo.svg";
-import LinkedInLogo from "@/components/svgs/LinkedIn.svg";
-import InstagramLogo from "@/components/svgs/Instagram.svg";
-import GitLogo from "@/components/svgs/Git.svg";
 
-const internalLinks = [
-  {
-    text: "ABOUT",
-    path: "/about",
-    disabled: false,
-  },
-  {
-    text: "WORKS",
-    path: "/works",
-    disabled: false,
-  },
-  {
-    text: "SNAPS",
-    path: "/snaps",
-    disabled: true,
-  },
-];
-
-const socials = [
-  {
-    link: "https://www.linkedin.com/in/alfred-hutomo/",
-    LogoComponent: LinkedInLogo,
-  },
-  {
-    link: "https://www.instagram.com/alfredhutomo/",
-    LogoComponent: InstagramLogo,
-  },
-  {
-    link: "https://github.com/AlfredHutomo",
-    LogoComponent: GitLogo,
-  },
-];
+import { socials } from "@/constants";
+import LinkAnimation from "@/animation/LinkAnimation";
+import { internalLinks } from "@/constants";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -56,7 +24,7 @@ const NavBar = () => {
           .map(
             (link) =>
               !link.disabled && (
-                <m.div key={link.text} whileHover={{ scale: 1.1 }}>
+                <LinkAnimation key={link.text}>
                   <Link
                     href={link.path}
                     className={`${
@@ -65,28 +33,18 @@ const NavBar = () => {
                   >
                     {link.text}
                   </Link>
-                </m.div>
+                </LinkAnimation>
               )
           )
           .filter(Boolean)}
-        <m.a
-          whileHover={{ scale: 1.1 }}
-          href="mailto:alfredhutomo@gmail.com"
-          className="link-btn"
-        >
-          EMAIL
-        </m.a>
       </div>
       <div className="flex flex-row sm:flex-col items-center justify-center sm:justify-between sm:h-[130px] gap-[30px] sm:gap-0 primary">
         {socials.map(({ link, LogoComponent }) => (
-          <m.a
-            href={link}
-            key={link}
-            whileHover={{ scale: 1.1 }}
-            aria-label={`Button to ${link}`}
-          >
-            <LogoComponent />
-          </m.a>
+          <LinkAnimation key={link}>
+            <a href={link} aria-label={`Button to ${link}`}>
+              <LogoComponent />
+            </a>
+          </LinkAnimation>
         ))}
       </div>
     </nav>

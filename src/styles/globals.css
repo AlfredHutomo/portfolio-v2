@@ -16,7 +16,7 @@
   }
 
   .page {
-    @apply flex flex-col px-7 pb-40 mb-7 sm:py-20 sm:px-[100px] w-full max-w-3xl overflow-scroll no-scrollbar;
+    @apply flex flex-col px-7 pb-40 sm:py-20 sm:px-[100px] w-full max-w-3xl overflow-scroll no-scrollbar;
   }
 
   .year-container {
@@ -68,5 +68,27 @@
   .no-scrollbar {
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
+  }
+
+  .hover-underline {
+    @apply text-abyss dark:text-steel inline-block relative w-fit;
+  }
+  
+  .hover-underline::after {
+    position: absolute;
+    content: '';
+
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+
+    @apply bg-abyss dark:bg-steel origin-bottom-right transition-transform;
+  }
+  
+  .hover-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }
