@@ -3,7 +3,8 @@ import LargeAHLogo from "@/components/svgs/large_ah_logo.svg";
 
 export const metadata = {
   title: "Alfred Hutomo",
-  description: "Welcome to my portfolio page",
+  description:
+    "Welcome to Alfred Hutomo's Web Portfolio! As a software engineer and an aspiring content-creator, I create captivating digital experiences that blend seamless functionality with stunning visuals. Stay tuned for my upcoming photography and videography portfolio, where I will showcase my artistic flair and storytelling abilities through striking imagery and captivating videos. Together, let's shape a remarkable online presence that leaves a lasting impression on your audience.",
 };
 
 export default function Home() {
