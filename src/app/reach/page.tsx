@@ -15,12 +15,12 @@ export default function Works() {
         <h4>Email</h4>
         <div className="flex gap-2 items-center">
           <a
-            href="mailto:alfredhutomo@gmail.com"
+            href="mailto:alfredhutomo+portfolio@gmail.com"
             className="hover-underline font-bold"
           >
             alfredhutomo[at]gmail.com
           </a>
-          <CopyButton text="alfredhutomo@gmail.com" />
+          <CopyButton text="alfredhutomo+portfolio@gmail.com" />
         </div>
         <h4>Socials</h4>
         {socials.map((social) => {
