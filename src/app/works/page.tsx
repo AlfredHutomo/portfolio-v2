@@ -11,7 +11,7 @@ export default function Works() {
     <PageReveal className="page">
       <section className="flex flex-col gap-6 leading-relaxed">
         <h1>Works</h1>
-        <h3>Professional Experiences</h3>
+        <h3>Experiences</h3>
         <p>
           <b>Software Development Engineer</b> at Kargo Tech, Jakarta,
           Indonesia, hybrid (2022 - present)
@@ -24,7 +24,6 @@ export default function Works() {
           <b>Full Stack Developer</b> at Relab Studios, Melbourne, Australia,
           remote (2021 - 2022)
         </p>
-        <h3>Programming & Coding Experiences</h3>
         <p>
           <b>Creative Officer & Webmaster</b> at Indonesian Film Festival (IFF)
           Australia (2020 - 2021)
