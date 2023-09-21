@@ -13,12 +13,16 @@ export default function Works() {
         <h1>Works</h1>
         <h3>Experiences</h3>
         <p>
-          <b>Software Development Engineer</b> at Kargo Tech, Jakarta,
-          Indonesia, hybrid (2022 - present)
+          <b>Fullstack Software Engineer</b> at Grab, Jakarta, Indonesia, hybrid
+          (2023 - present)
         </p>
         <p>
-          <b>Full-Stack Engineering Mentor</b> at Skilvul, Jakarta, Indonesia,
-          remote (2023)
+          <b>Fullstack Web Development Mentor</b> at Skilvul, Jakarta,
+          Indonesia, remote (2023 - present)
+        </p>
+        <p>
+          <b>Software Development Engineer</b> at Kargo Tech, Jakarta,
+          Indonesia, hybrid (2022 - 2023)
         </p>
         <p>
           <b>Full Stack Developer</b> at Relab Studios, Melbourne, Australia,
